@@ -1,15 +1,8 @@
 package testCases;
 
-import net.bytebuddy.utility.RandomString;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import pageObjects.*;
-import java.util.random.*;
-
-import java.time.Duration;
 
 public class registrationTest extends baseClass {
 
@@ -19,12 +12,18 @@ public class registrationTest extends baseClass {
         home.setMouseHover();
         home.setRegistration();
 
-        registrationPage registeration = new registrationPage(driver);
-        registeration.setName("Teja P");
-        registeration.setMailId(randomString()+"@gmail.com");
-        registeration.setPassword("admin@123");
-        registeration.setReEnterPassword("admin@123");
-        registeration.setVerify();
+        registrationPage registration = new registrationPage(driver);
+        registration.setName("Teja P");
+        registration.setMailId(randomString()+"@gmail.com");
+        registration.setPassword("admin@123");
+        registration.setReEnterPassword("admin@123");
+        registration.setVerify();
+
+        if (driver.findElement(By.xpath("//i[@aria-label='Amazon']")).isDisplayed()){
+            System.out.println("Success");
+        }else {
+            System.out.println("fail");
+        }
     }
 
 }

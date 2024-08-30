@@ -9,24 +9,24 @@ import org.testng.annotations.BeforeClass;
 import java.time.Duration;
 
 public class baseClass {
-    WebDriver driver;
+     public WebDriver driver;
 
     @BeforeClass
     void setUp() {
 
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.amazon.com/");
         driver.manage().window().maximize();
     }
 
     @AfterClass
-    void quit()  {
+    void tearDown()  {
         driver.quit();
     }
 
     public static String randomString(){
-        String genteratedString = RandomStringUtils.randomAlphabetic(5);
+        String genteratedString = RandomStringUtils.randomAlphabetic(6);
         return genteratedString;
     }
 }
