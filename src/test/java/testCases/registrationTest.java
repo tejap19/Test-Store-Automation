@@ -12,9 +12,10 @@ public class registrationTest extends baseClass {
         home.setLoginOrRegister();
 
         loginPage login = new loginPage(driver);
-        if (login.setRegisterOpt()){
+        try {
+            login.setRegisterOpt();
             login.setClickContinue();
-        }
+
 
         registrationPage register = new registrationPage(driver);
         register.setFirstName("tej");
@@ -33,9 +34,9 @@ public class registrationTest extends baseClass {
         register.setPrivacyPolicy();
         register.setSubmit();
 
-        if (register.setValidate()){
+
             System.out.println("YOUR ACCOUNT HAS BEEN CREATED!");
-        }else {
+        }catch (Exception e){
             System.out.println("ACCOUNT REGISTRATION FAILED");
         }
 

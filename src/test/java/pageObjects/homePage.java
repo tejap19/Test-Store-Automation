@@ -48,6 +48,36 @@ public class homePage extends basePage{
     WebElement hairCareFunctionValidation;
     @FindBy(xpath = "//ul[@class='breadcrumb']//a[contains(text(),'Books')]")
     WebElement booksFunctionValidation;
+    @FindBy(xpath = "//*[@id='main_menu_top']/li[3]/a/span")
+    WebElement cart;
+    @FindBy(xpath = "//li[2]//div[1]//ul[1]//li[2]//a[1]")
+    WebElement tShirts;
+    @FindBy(xpath = "//a[normalize-space()='T-shirts']")
+    WebElement tShirtsValidation;
+    @FindBy(xpath = "//li[3]//div[1]//ul[1]//li[2]//a[1]")
+    WebElement eyes;
+    @FindBy(xpath = "//a[normalize-space()='Eyes']")
+    WebElement eyesValidation;
+    @FindBy(xpath = "//li[4]//div[1]//ul[1]//li[5]//a[1]")
+    WebElement sunScreen;
+    @FindBy(xpath = "//a[normalize-space()='Sun']")
+    WebElement sunValidation;
+    @FindBy(xpath = "//li[5]//div[1]//ul[1]//li[2]//a[1]")
+    WebElement fragWomen;
+    @FindBy(xpath = "//a[normalize-space()='Women']")
+    WebElement fragWomenValidation;
+    @FindBy(xpath = "//li[7]//div[1]//ul[1]//li[1]//a[1]")
+    WebElement conditioner;
+    @FindBy(xpath = "//a[normalize-space()='Conditioner']")
+    WebElement conditionerValidation;
+    @FindBy(xpath = "/html/body/div/header/div[2]/div/div[2]/ul/li/a/span")
+    WebElement currency;
+    @FindBy(xpath = "//a[contains(text(),'€ Euro')]")
+    WebElement euro;
+    @FindBy(xpath = "//a[normalize-space()='£ Pound Sterling']")
+    WebElement pound;
+    @FindBy(xpath = "//a[contains(text(),'$ US Dollar')]")
+    WebElement usDollar;
 
     Actions action = new Actions(driver);
 
@@ -125,6 +155,54 @@ public class homePage extends basePage{
     }
     public boolean setBooksFunctionValidation(){
         return booksFunctionValidation.isDisplayed();
+    }
+    public void setCart(){
+        cart.click();
+    }
+    public void setTShirts(){
+        action.moveToElement(apparelAccessories).perform();
+        action.moveToElement(tShirts).perform();
+        tShirts.click();
+    }
+    public void setEyes(){
+        action.moveToElement(makeUp).perform();
+        action.moveToElement(eyes).perform();
+        eyes.click();
+    }
+    public void setSunScreen(){
+        action.moveToElement(skinCare).perform();
+        action.moveToElement(sunScreen).perform();
+        sunScreen.click();
+    }
+    public void setFragWomen(){
+        action.moveToElement(fragrance).perform();
+        action.moveToElement(fragWomen).perform();
+        fragWomen.click();
+    }
+    public void setConditioner(){
+        action.moveToElement(hairCare).perform();
+        action.moveToElement(conditioner).perform();
+        conditioner.click();
+    }
+    public void setCurrency(){
+        action.moveToElement(currency).perform();
+        action.moveToElement(pound).perform();
+        pound.click();
+    }
+    public boolean settShirtsValidation(){
+        return tShirtsValidation.isDisplayed();
+    }
+    public boolean setEyesValidation(){
+        return eyesValidation.isDisplayed();
+    }
+    public boolean setSunValidation(){
+        return sunValidation.isDisplayed();
+    }
+    public boolean setFragWomenValidation(){
+        return fragWomenValidation.isDisplayed();
+    }
+    public boolean setConditionerValidation(){
+        return conditionerValidation.isDisplayed();
     }
 
 }

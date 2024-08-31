@@ -16,7 +16,7 @@ public class baseClass {
     void setUp() {
 
         driver = new ChromeDriver();
-//        driver.manage().deleteAllCookies();
+        driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://automationteststore.com/");
         driver.manage().window().maximize();

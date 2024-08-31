@@ -1,5 +1,6 @@
 package testCases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.homePage;
 import pageObjects.searchPage;
@@ -14,31 +15,22 @@ public class searchBarTest extends baseClass{
         home.setSearchIcon();
 
         searchPage search = new searchPage(driver);
-        if (search.setFragranceValidation()){
-            System.out.println("Fragrances are displayed");
-        }else {
-            System.out.println("Fragrances is not displayed");
-        }
+        Assert.assertTrue(search.setFragranceValidation(),"Fragrances is not displayed");
+
         search.setHomeOpt();
 
         home.setSearchBar("T-shirts");
         home.setSearchIcon();
 
-        if (search.setTShitsValidation()){
-            System.out.println("T-shirts are displayed");
-        }else {
-            System.out.println("T-shirts are not displayed");
-        }
+        Assert.assertTrue(search.setTShitsValidation(),"T-shirts are not displayed");
+
         search.setHomeOpt();
 
         home.setSearchBar("Shoes");
         home.setSearchIcon();
 
-        if (search.setShoesValidation()){
-            System.out.println("T-shirts are displayed");
-        }else {
-            System.out.println("T-shirts are not displayed");
-        }
+        Assert.assertTrue(search.setShoesValidation(),"T-shirts are not displayed");
+
         search.setHomeOpt();
 
     }
