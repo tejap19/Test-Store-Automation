@@ -23,6 +23,33 @@ public class sampleTests {
 //        tags();
 //        calenders();
 //        jsExecutor();
+        testCase();
+    }
+
+    private static void testCase() throws InterruptedException {
+        driver.get("https://automationteststore.com/");
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//a[normalize-space()='Login or register']")).click();
+        driver.findElement(By.xpath("//button[normalize-space()='Continue']")).click();
+        driver.findElement(By.xpath("//input[@id='AccountFrm_firstname']")).sendKeys("tej");
+        driver.findElement(By.xpath("//input[@id='AccountFrm_lastname']")).sendKeys("P");
+        driver.findElement(By.xpath("//input[@id='AccountFrm_email']")).sendKeys("asdFGb@gmail.com");
+        driver.findElement(By.xpath("//input[@id='AccountFrm_telephone']")).sendKeys("7386576565");
+        driver.findElement(By.xpath("//input[@id='AccountFrm_address_1']")).sendKeys("dr no : 14/19");
+        driver.findElement(By.xpath("//input[@id='AccountFrm_city']")).sendKeys("vizag");
+
+        Select state = new Select(driver.findElement(By.xpath("//select[@id='AccountFrm_zone_id']")));
+        state.selectByVisibleText("Aberdeen");
+        driver.findElement(By.xpath("//input[@id='AccountFrm_postcode']")).sendKeys("70008");
+        Select country = new Select(driver.findElement(By.xpath("//select[@id='AccountFrm_country_id']")));
+        country.selectByVisibleText("United Kingdom");
+        driver.findElement(By.xpath("//input[@id='AccountFrm_loginname']")).sendKeys("tejap");
+        driver.findElement(By.xpath("//input[@id='AccountFrm_password']")).sendKeys("Admin@123");
+        driver.findElement(By.xpath("//input[@id='AccountFrm_confirm']")).sendKeys("Admin@123");
+        driver.findElement(By.xpath("//input[@id='AccountFrm_newsletter0']")).click();
+        driver.findElement(By.xpath("//input[@id='AccountFrm_agree']")).click();
+        driver.findElement(By.xpath("//button[normalize-space()='Continue']")).click();
+        String url = "https://tutorialsninja.com/demo/";
     }
 
     public static void alerts() throws InterruptedException {

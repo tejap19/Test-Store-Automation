@@ -12,18 +12,29 @@ public class homePage extends basePage{
         super(driver);
     }
 
-    @FindBy(id = "nav-link-accountList-nav-line-1")
-    WebElement mouseHover;
-    @FindBy(xpath = "//a[@class='nav-a']")
-    WebElement registration;
+    @FindBy(xpath = "//a[normalize-space()='Login or register']")
+    WebElement loginOrRegister;
+    @FindBy(xpath = "//input[@id='filter_keyword']")
+    WebElement searchBar;
+    @FindBy(xpath = "//a[@class='active menu_home']")
+    WebElement homeBtn;
+    @FindBy(xpath = "//div[@title='Go']//i[@class='fa fa-search']")
+    WebElement searchIcon;
+
 
     Actions action = new Actions(driver);
 
-    public void setMouseHover(){
-        action.moveToElement(mouseHover).perform();
+    public void setLoginOrRegister(){
+        loginOrRegister.click();
     }
-    public void setRegistration(){
-        registration.click();
+    public void setSearchBar(String search){
+        searchBar.sendKeys(search);
+    }
+    public void setHomeBtn(){
+        homeBtn.click();
+    }
+    public void setSearchIcon(){
+        searchIcon.click();
     }
 
 }
