@@ -14,7 +14,7 @@ public class searchBarTest extends baseClass{
         home.setSearchIcon();
 
         searchPage search = new searchPage(driver);
-        if (search.setFragranceValidate()){
+        if (search.setFragranceValidation()){
             System.out.println("Fragrances are displayed");
         }else {
             System.out.println("Fragrances is not displayed");
@@ -24,7 +24,7 @@ public class searchBarTest extends baseClass{
         home.setSearchBar("T-shirts");
         home.setSearchIcon();
 
-        if (search.settShitsValidate()){
+        if (search.setTShitsValidation()){
             System.out.println("T-shirts are displayed");
         }else {
             System.out.println("T-shirts are not displayed");
@@ -34,7 +34,7 @@ public class searchBarTest extends baseClass{
         home.setSearchBar("Shoes");
         home.setSearchIcon();
 
-        if (search.setShoesValidate()){
+        if (search.setShoesValidation()){
             System.out.println("T-shirts are displayed");
         }else {
             System.out.println("T-shirts are not displayed");

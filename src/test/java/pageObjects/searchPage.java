@@ -13,23 +13,23 @@ public class searchPage extends basePage{
     @FindBy(xpath = "//a[@class='active menu_home']")
     WebElement homeOpt;
     @FindBy(xpath = "//a[normalize-space()='MAN Eau de Toilette Spray']")
-    WebElement fragranceValidate;
+    WebElement fragranceValidation;
     @FindBy(xpath = "//a[normalize-space()='Fruit of the Loom T-Shirts 5 Pack - Super Premium']")
-    WebElement tShitsValidate;
+    WebElement tShitsValidation;
     @FindBy(xpath = "//a[contains(text(),'Womens high heel point toe stiletto sandals ankle ')]")
-    WebElement shoesValidate;
+    WebElement shoesValidation;
 
     public void setHomeOpt(){
         homeOpt.click();
     }
-    public boolean setFragranceValidate (){
-        return fragranceValidate.isDisplayed();
+    public boolean setFragranceValidation(){
+        return fragranceValidation.isDisplayed();
     }
-    public boolean settShitsValidate(){
-        return tShitsValidate.isDisplayed();
+    public boolean setTShitsValidation(){
+        return tShitsValidation.isDisplayed();
     }
-    public boolean setShoesValidate(){
-        return shoesValidate.isDisplayed();
+    public boolean setShoesValidation(){
+        return shoesValidation.isDisplayed();
     }
 
 }
