@@ -78,6 +78,8 @@ public class homePage extends basePage{
     WebElement pound;
     @FindBy(xpath = "//a[contains(text(),'$ US Dollar')]")
     WebElement usDollar;
+    @FindBy(xpath = "//*[@id='main_menu_top']/li[2]/a/span")
+    WebElement myAccount;
 
     Actions action = new Actions(driver);
 
@@ -188,6 +190,9 @@ public class homePage extends basePage{
         action.moveToElement(currency).perform();
         action.moveToElement(pound).perform();
         pound.click();
+    }
+    public void setMyAccount(){
+        myAccount.click();
     }
     public boolean settShirtsValidation(){
         return tShirtsValidation.isDisplayed();

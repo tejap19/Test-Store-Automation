@@ -41,6 +41,10 @@ public class searchPage extends basePage{
     WebElement shampoo;
     @FindBy(xpath = "//a[normalize-space()='Curls to straight Shampoo']")
     WebElement shampooValidation;
+    @FindBy(xpath = "//a[normalize-space()='Add to wish list']")
+    WebElement wishlist;
+    @FindBy(xpath = "//a[normalize-space()='Remove from wish list']")
+    WebElement wishlistValidation;
 
 
 
@@ -86,6 +90,13 @@ public class searchPage extends basePage{
     }
     public boolean setShampooValidation(){
         return shampooValidation.isDisplayed();
+    }
+    public void setWishlist(){
+        wishlist.click();
+    }
+    public boolean setWishlistValidation() throws InterruptedException {
+        Thread.sleep(1000);
+        return wishlistValidation.isDisplayed();
     }
 
 }
