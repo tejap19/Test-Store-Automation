@@ -44,7 +44,6 @@ public class placeOrderTest extends baseClass{
 
             System.out.println("ORDER PLACED SUCCESSFULLY ");
 
-
         }catch (Exception e){
             System.out.println("PLACING ORDER IS FAILED");
             e.printStackTrace();
