@@ -1,5 +1,6 @@
 package testCases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.homePage;
 import pageObjects.loginPage;
@@ -25,18 +26,18 @@ public class wishlistTest extends baseClass{
             home.setSearchIcon();
 
             searchPage search = new searchPage(driver);
-            search.setTShitsValidation();
+            Assert.assertTrue(search.setTShitsValidation(),"T-SHIRTS NOT DISPLAYED");
             search.setWishlist();
-            search.setWishlistValidation();
+            Assert.assertTrue(search.setWishlistValidation(),"NOT ADDED TO WISHLIST");
 
             home.setHomeBtn();
             home.setSearchBar("shampoo");
             home.setSearchIcon();
 
             search.setShampoo();
-            search.setShampooValidation();
+            Assert.assertTrue(search.setShampooValidation(),"SHAMPOO NOT DISPLAYED");
             search.setWishlist();
-            search.setWishlistValidation();
+            Assert.assertTrue(search.setWishlistValidation(),"NOT ADDED TO WISHLIST");
 
             home.setHomeBtn();
             home.setMyAccount();

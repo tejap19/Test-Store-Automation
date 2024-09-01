@@ -1,5 +1,6 @@
 package testCases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.homePage;
 import pageObjects.loginPage;
@@ -24,23 +25,24 @@ public class myAccountTest extends baseClass{
             myAccountPage account = new myAccountPage(driver);
             account.setDashboard();
             account.setAccountWishlist();
-            account.setAccountWishlistValidation();
+            Assert.assertTrue(account.setAccountWishlistValidation(),"WISHLIST FUNCTION IS NOT WORKING");
             account.setEditAccount();
-            account.setEditAccountValidation();
+            Assert.assertTrue(account.setEditAccountValidation(),"EDIT ACCOUNT FUNCTION IS NOT WORKING");
             account.setChangePassword();
-            account.setChangePasswordValidation();
+            Assert.assertTrue(account.setChangePasswordValidation(),"CHANGE PASSWORD FUNCTION IS NOT WORKING");
             account.setManageAddress();
-            account.setManageAddressValidation();
+            Assert.assertTrue(account.setManageAddressValidation(),"CHANGE PASSWORD FUNCTION IS NOT WORKING");
             account.setOrderHistory();
-            account.setOrderHistoryValidation();
+            Assert.assertTrue(account.setOrderHistoryValidation(),"ORDER HISTORY FUNCTION IS NOT WORKING");
             account.setTransactionHistory();
-            account.setTransactionHistoryValidation();
+            Assert.assertTrue(account.setTransactionHistoryValidation(),"ORDER HISTORY FUNCTION IS NOT WORKING");
             account.setDownloads();
-            account.setDownloadsValidation();
+            Assert.assertTrue(account.setDownloadsValidation(),"ORDER HISTORY FUNCTION IS NOT WORKING");
             account.setNotifications();
-            account.setNotificationsValidation();
+            Assert.assertTrue(account.setNotificationsValidation(),"ORDER HISTORY FUNCTION IS NOT WORKING");
             account.setLogOff();
-            account.setLogOffValidation();
+            Assert.assertTrue(account.setLogOffValidation(),"ORDER HISTORY FUNCTION IS NOT WORKING");
+
 
             System.out.println("Test Passed");
 

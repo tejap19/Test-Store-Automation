@@ -5,9 +5,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.homePage;
 import pageObjects.loginPage;
+import pageObjects.myAccountPage;
 
 public class loginTest extends baseClass{
 
@@ -25,7 +27,8 @@ public class loginTest extends baseClass{
 
         try {
             // Verify if login is successful or not
-            boolean isLoginSuccessful = driver.findElement(By.xpath("//h2[normalize-space()='My Account']")).isDisplayed();
+            myAccountPage account = new myAccountPage(driver);
+            Assert.assertTrue(account.setMyAccountValidation());
             System.out.println("Test passed for "+ loginId +" "+ pwd);
         } catch (NoSuchElementException e) {
             System.out.println("Test failed for "+ loginId +" "+ pwd);

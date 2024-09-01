@@ -28,7 +28,7 @@ public class addToCartTest extends baseClass{
 
         searchPage search = new searchPage(driver);
         try {
-            search.setShoesValidation();
+            Assert.assertTrue(search.setShoesValidation(),"SHOES NOT DISPLAYED");
             search.setShoesColorRed();
             search.setQuantity("2");
             search.setAddToCart();
@@ -45,7 +45,7 @@ public class addToCartTest extends baseClass{
 
         try {
             search.setShampoo();
-            search.setShampooValidation();
+            Assert.assertTrue(search.setShampooValidation(),"SHAMPOO NOT DISPLAYED");
             search.setQuantity("1");
             search.setAddToCart();
 

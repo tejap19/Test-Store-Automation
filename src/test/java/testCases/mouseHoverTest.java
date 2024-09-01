@@ -1,5 +1,6 @@
 package testCases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.homePage;
 
@@ -13,23 +14,23 @@ public class mouseHoverTest extends baseClass{
             home.setHomeBtn();
 
             home.setTShirts();
-            home.settShirtsValidation();
+            Assert.assertTrue(home.settShirtsValidation(),"T-SHITS NOT DISPLAYED");
             home.setHomeBtn();
 
             home.setEyes();
-            home.setEyesValidation();
+            Assert.assertTrue(home.setEyesValidation(),"EYES NOT DISPLAYED");
             home.setHomeBtn();
 
             home.setSunScreen();
-            home.setSunValidation();
+            Assert.assertTrue(home.setSunValidation(),"SUNSCREEN NOT DISPLAYED");
             home.setHomeBtn();
 
             home.setFragWomen();
-            home.setFragWomenValidation();
+            Assert.assertTrue(home.setFragWomenValidation(),"FRAGRANCE NOT DISPLAYED");
             home.setHomeBtn();
 
             home.setConditioner();
-            home.setConditionerValidation();
+            Assert.assertTrue(home.setConditionerValidation(),"CONDITIONER NOT DISPLAYED");
             home.setHomeBtn();
 
             home.setCurrency();

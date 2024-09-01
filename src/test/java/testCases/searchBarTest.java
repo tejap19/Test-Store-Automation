@@ -16,21 +16,16 @@ public class searchBarTest extends baseClass{
 
         searchPage search = new searchPage(driver);
         Assert.assertTrue(search.setFragranceValidation(),"Fragrances is not displayed");
-
         search.setHomeOpt();
 
         home.setSearchBar("T-shirts");
         home.setSearchIcon();
-
         Assert.assertTrue(search.setTShitsValidation(),"T-shirts are not displayed");
-
         search.setHomeOpt();
 
         home.setSearchBar("Shoes");
         home.setSearchIcon();
-
         Assert.assertTrue(search.setShoesValidation(),"T-shirts are not displayed");
-
         search.setHomeOpt();
 
     }

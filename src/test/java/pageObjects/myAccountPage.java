@@ -10,6 +10,8 @@ public class myAccountPage extends basePage{
         super(driver);
     }
 
+    @FindBy(xpath = "//h2[normalize-space()='My Account']")
+    WebElement myAccount;
     @FindBy(xpath = "//li[@class='selected']//a[@href='https://automationteststore.com/index.php?rt=account/account']")
     WebElement dashboard;
     @FindBy(xpath = "//ul[@class='side_account_list']//li//a[@href='https://automationteststore.com/index.php?rt=account/wishlist']")
@@ -48,6 +50,14 @@ public class myAccountPage extends basePage{
     WebElement logOff;
     @FindBy(xpath = "//a[normalize-space()='Logout']")
     WebElement logOffValidation;
+
+    public void setMyAccount(){
+        myAccount.click();
+    }
+
+    public boolean setMyAccountValidation(){
+        return myAccount.isDisplayed();
+    }
 
     public void setDashboard() {
         dashboard.click();
