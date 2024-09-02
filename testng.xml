@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="basicUtilities.ExtentReportManager"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="/home/teja/Downloads/Automation/Selenium">
+<!--        <classes>-->
+<!--            <class name="testCases.addToCartTest">-->
+<!--                <methods>-->
+<!--                    <include name="addToCart"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testCases.homePageTest">-->
+<!--                <methods>-->
+<!--                    <include name="home"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testCases.loginTest">-->
+<!--                <methods>-->
+<!--                    <include name="login"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testCases.mouseHoverTest">-->
+<!--                <methods>-->
+<!--                    <include name="mouseActions"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testCases.myAccountTest">-->
+<!--                <methods>-->
+<!--                    <include name="myAccount"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testCases.placeOrderTest">-->
+<!--                <methods>-->
+<!--                    <include name="placingOrder"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testCases.registrationTest">-->
+<!--                <methods>-->
+<!--                    <include name="register"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testCases.searchBarTest">-->
+<!--                <methods>-->
+<!--                    <include name="search"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testCases.wishlistTest">-->
+<!--                <methods>-->
+<!--                    <include name="wishlist"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="tests.loginTest">-->
+<!--                <methods>-->
+<!--                    <include name="login"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="tests.testNG">-->
+<!--                <methods>-->
+<!--                    <include name="openApp"/>-->
+<!--                    <include name="testLogo"/>-->
+<!--                    <include name="login"/>-->
+<!--                    <include name="logOut"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/teja/Downloads/Automation/Selenium/src/test/java/testCases/registrationTest.java">
+        <classes>
+            <class name="testCases.registrationTest">
+                <methods>
+                    <include name="register"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/teja/Downloads/Automation/Selenium/src/test/java/testCases/loginTest.java">
+        <classes>
+            <class name="testCases.loginTest">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/teja/Downloads/Automation/Selenium/src/test/java/testCases/searchBarTest.java">
+        <classes>
+            <class name="testCases.searchBarTest">
+                <methods>
+                    <include name="search"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/teja/Downloads/Automation/Selenium/src/test/java/testCases/homePageTest.java">
+        <classes>
+            <class name="testCases.homePageTest">
+                <methods>
+                    <include name="home"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/teja/Downloads/Automation/Selenium/src/test/java/testCases/mouseHoverTest.java">
+        <classes>
+            <class name="testCases.mouseHoverTest">
+                <methods>
+                    <include name="mouseActions"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/teja/Downloads/Automation/Selenium/src/test/java/testCases/myAccountTest.java">
+        <classes>
+            <class name="testCases.myAccountTest">
+                <methods>
+                    <include name="myAccount"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/teja/Downloads/Automation/Selenium/src/test/java/testCases/wishlistTest.java">
+        <classes>
+            <class name="testCases.wishlistTest">
+                <methods>
+                    <include name="wishlist"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/teja/Downloads/Automation/Selenium/src/test/java/testCases/addToCartTest.java">
+        <classes>
+            <class name="testCases.addToCartTest">
+                <methods>
+                    <include name="addToCart"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true"
+          name="/home/teja/Downloads/Automation/Selenium/src/test/java/testCases/placeOrderTest.java">
+        <classes>
+            <class name="testCases.placeOrderTest">
+                <methods>
+                    <include name="placingOrder"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
