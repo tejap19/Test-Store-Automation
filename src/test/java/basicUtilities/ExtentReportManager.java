@@ -10,6 +10,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import testCases.baseClass;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -61,20 +62,19 @@ public class ExtentReportManager implements ITestListener {
 
     }
 
+
     public void onTestFailure(ITestResult result) {
-        test = extent.createTest(result.getTestClass().getName());
-        test.assignCategory(result.getMethod().getGroups());
-
-        test.log(Status.FAIL, result.getName() + "got fails");
-        test.log(Status.INFO, result.getThrowable().getMessage());
-
-        try {
-            String imgpath = new baseClass().captureSceen(result.getName());
-            test.addScreenCaptureFromPath(imgpath);
-        } catch (Exception e1) {
-            e1.printStackTrace();
+        String imgPath = null;
+        imgPath = baseClass.captureSceen(result.getName());
+        if (imgPath != null) {
+            test.addScreenCaptureFromPath(imgPath);
+        } else {
+            System.out.println("Screenshot not captured");
         }
+        test.log(Status.FAIL, result.getName() + " got failed");
+        test.log(Status.INFO, result.getThrowable().getMessage());
     }
+
 
     public void onTestSkipped(ITestResult result) {
         test = extent.createTest(result.getTestClass().getName());

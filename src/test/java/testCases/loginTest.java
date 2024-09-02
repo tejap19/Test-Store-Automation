@@ -25,30 +25,11 @@ public class loginTest extends baseClass{
         login.setPassword(pwd);
         login.setSignIn();
 
-//        try {
-//            // Verify if login is successful or not
-//            myAccountPage account = new myAccountPage(driver);
-//            Assert.assertTrue(account.setMyAccountValidation());
-//            System.out.println("Test passed for "+ loginId +" "+ pwd);
-//        } catch (NoSuchElementException e) {
-//            System.out.println("Test failed for "+ loginId +" "+ pwd);
-//        } finally {
-//            try {
-//                login.setLogOff();
-//            } catch (NoSuchElementException e) {
-//                System.out.println("Logout link not found");
-//            }
-//        }
-
         try {
+            // Verify if login is successful or not
             myAccountPage account = new myAccountPage(driver);
-            boolean isAccountValid = account.setMyAccountValidation();
-
-            if (isAccountValid) {
-                System.out.println("Test passed for " + loginId + " " + pwd);
-            } else {
-                Assert.fail("Test failed for " + loginId + " " + pwd + " - Account validation failed.");
-            }
+            Assert.assertTrue(account.setMyAccountValidation());
+            System.out.println("Test passed for "+ loginId +" "+ pwd);
         } catch (NoSuchElementException e) {
             Assert.fail("Test failed for " + loginId + " " + pwd + " - NoSuchElementException: " + e.getMessage());
         } finally {
