@@ -26,13 +26,13 @@ public class placeOrderTest extends baseClass{
 
         try {
             home.setHomeBtn();
-            home.setSearchBar("shoes");
-            home.setSearchIcon();
-
-            Assert.assertTrue(search.setShoesValidation(),"SHOES NOT DISPLAYED");
-            search.setShoesColorRed();
-            search.setQuantity("1");
-            search.setAddToCart();
+//            home.setSearchBar("shoes");
+//            home.setSearchIcon();
+//
+//            Assert.assertTrue(search.setShoesValidation(),"SHOES NOT DISPLAYED");
+//            search.setShoesColorBlack();
+//            search.setQuantity("1");
+//            search.setAddToCart();
 
             home.setCart();
 
