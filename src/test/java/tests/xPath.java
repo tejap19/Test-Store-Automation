@@ -96,6 +96,7 @@ public class xPath {
 
         Actions actions = new Actions(driver);
 
+
 //        driver.findElement(By.className("_1wE2Px")).click();
         actions.moveToElement((driver.findElement(By.xpath("//img[@alt='Fashion']")))).perform();
         Thread.sleep(2000);

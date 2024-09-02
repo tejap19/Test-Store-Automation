@@ -62,12 +62,12 @@ public class baseClass {
 //        return targetFilePath;
 //    }
 
-    public static String captureSceen(String tname) {
+    public static String captureScreen(String testName) {
         if (driver == null) {
             return null;
         }
-        String timeStamp = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-        String targetFilePath = System.getProperty("user.dir") + "//screenshots//" + tname + "_" + timeStamp + ".png";
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        String targetFilePath = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + testName + "_" + timeStamp + ".png";
         try {
             File sourceFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(sourceFile, new File(targetFilePath));

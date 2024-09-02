@@ -64,14 +64,14 @@ public class ExtentReportManager implements ITestListener {
 
 
     public void onTestFailure(ITestResult result) {
-        String imgPath = null;
-        imgPath = baseClass.captureSceen(result.getName());
+        String imgPath = baseClass.captureScreen(result.getMethod().getMethodName());
         if (imgPath != null) {
+            // Assuming 'test' is an instance of ExtentReports test, replace with your test object
             test.addScreenCaptureFromPath(imgPath);
         } else {
             System.out.println("Screenshot not captured");
         }
-        test.log(Status.FAIL, result.getName() + " got failed");
+        test.log(Status.FAIL, result.getMethod().getMethodName() + " failed");
         test.log(Status.INFO, result.getThrowable().getMessage());
     }
 
